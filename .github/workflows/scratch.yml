@@ -1,0 +1,19 @@
+name: Vivek Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform_job:
+
+    name: Terraform Deployment
+
+    runs-on: self-hosted
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Runner
+        run: hostname
